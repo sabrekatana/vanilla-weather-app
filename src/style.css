@@ -37,6 +37,7 @@ a:hover {
   min-width: 500px;
   max-width: 1100px;
   margin: 0px auto;
+  padding-top: 60px;
 }
 
 /*Card general*/
@@ -72,9 +73,10 @@ a:hover {
 }
 
 .conditions {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
-  margin-bottom: -20px;
+  margin-bottom: 10px;
+  margin-top: -10px;
 }
 
 .city {
@@ -82,20 +84,25 @@ a:hover {
   text-align: left;
   font-weight: 400;
   line-height: 1.5;
-  padding-top: 40px;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .current-temp {
   font-size: 80px;
 }
+
+.metric {
+  font-size: 16px;
+}
 /*Future forecast cards*/
 .forecast {
   margin: 16px auto;
-  height: 150px;
+  height: 120px;
   padding-left: 40px;
 }
 h3 {
-  padding-top: 40px;
+  padding-top: 20px;
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 8px;
@@ -115,8 +122,11 @@ h3 {
 .details {
   max-height: 70px;
   margin: 8px auto;
-  padding: 26px 24px;
+  padding: 20px 40px 16px 40px;
   display: block;
+}
+.small-details {
+  margin-left: 8px;
 }
 /*Search bar*/
 .city-input {
@@ -141,7 +151,7 @@ h3 {
 form {
   display: block;
   width: 500px;
-  margin: 24px auto;
+  margin: 0px auto;
 }
 
 /*Icons*/
@@ -152,11 +162,21 @@ form {
 .small-weather {
   height: 100px;
   width: 100px;
-  margin: 24px 24px;
+  margin: 10px 24px;
+  transition: 200ms ease-in-out;
+}
+
+.small-weather:hover {
+  scale: 1.2;
 }
 
 .large-weather {
   width: 200px;
   height: 200px;
-  margin-top: 30px;
+  margin-top: 40px;
+  transition: 300ms ease-in-out;
+}
+
+.large-weather:hover {
+  scale: 1.2;
 }
