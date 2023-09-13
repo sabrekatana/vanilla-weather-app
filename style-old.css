@@ -1,0 +1,124 @@
+body {
+  background-color: #cfe2f4;
+}
+h1,
+h2,
+h3,
+p {
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-size: 16px;
+}
+.city {
+  font-size: 45px;
+  text-align: left;
+  font-weight: 300;
+  line-height: 1.5;
+  padding-top: 40px;
+}
+h3 {
+  font-size: 18px;
+}
+.largeTemp {
+  font-size: 100px;
+}
+.smallTemp {
+  font-size: 40px;
+  font-weight: 600;
+}
+.smallTempLow {
+  font-size: 34px;
+  font-weight: 400;
+  text-align: left;
+}
+.footer {
+  color: gray;
+  text-align: center;
+  font-family: monospace;
+  text-decoration: none;
+}
+.smallDetails {
+  text-align: left;
+  font-size: 24px;
+}
+.main {
+  display: block;
+  margin: 0 auto;
+  padding: 70px 70px;
+  max-width: 1300px;
+}
+
+.forecast {
+  margin: 16px auto;
+  padding: 30px 40px 10px 40px;
+  height: 150px;
+}
+.currentForecast {
+  padding: 30px 40px 60px 40px;
+  height: fit-content;
+  margin: 24px auto;
+}
+.details {
+  max-height: 70px;
+  margin: 8px auto;
+  padding: 26px 24px;
+  display: inline-block;
+}
+.card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.394);
+  backdrop-filter: blur(5px);
+  border-radius: 16px;
+  border: none;
+  width: 500px;
+}
+.date {
+  text-align: center;
+  font-weight: 700;
+}
+.time {
+  font-size: 14px;
+  text-align: center;
+}
+.smallIcon {
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+}
+.mediumIcon {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 8px auto;
+  text-align: right;
+}
+.largeIcon {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+}
+.iconBox {
+  text-align: right;
+}
+.buttonSubmit {
+  width: 100px;
+  background-color: #7393b3;
+  color: white;
+  border-style: solid;
+  border-color: #7393b3;
+  border-radius: 0px 36px 36px 0px;
+  height: 40px;
+}
+.cityInput {
+  width: 380px;
+  height: 40px;
+  border-radius: 36px 0px 0px 36px;
+  border-color: white;
+  border-style: solid;
+  padding: 16px;
+}
+form {
+  width: 500px;
+  display: block;
+  margin: 20px auto;
+}

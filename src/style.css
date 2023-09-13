@@ -1,0 +1,76 @@
+/*General*/
+body,
+.light-theme {
+  background-color: #1357be;
+}
+body,
+.dark-theme {
+  background-color: #000033;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main-container {
+  min-width: 500px;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.card {
+  display: block;
+  margin: 16px auto;
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: none;
+  width: 500px;
+}
+
+/*Search bar*/
+.city-input {
+  width: 300px;
+  height: 40px;
+  border-radius: 36px 0px 0px 36px;
+  border-style: solid;
+  border-color: white;
+  padding: 16px;
+}
+.buttonSubmit {
+  border-radius: 0px 36px 36px 0px;
+  border-style: solid;
+  border-color: #7393b3;
+  background-color: #7393b3;
+  color: white;
+  background-color: none;
+  font-family: "Poppins", sans-serif;
+  width: 80px;
+  height: 40px;
+}
+form {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+}
+
+/*Today's forecast card*/
