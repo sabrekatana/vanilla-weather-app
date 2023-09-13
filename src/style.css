@@ -17,10 +17,6 @@ p {
   color: white;
 }
 
-p {
-  font-size: 16px;
-}
-
 a {
   color: yellow;
   text-decoration: none;
@@ -30,12 +26,20 @@ a:hover {
   text-decoration: underline;
 }
 
+.footer {
+  font-family: monospace;
+  text-align: center;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
 .main-container {
   min-width: 500px;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0px auto;
 }
 
+/*Card general*/
 .card {
   display: block;
   margin: 16px auto;
@@ -46,10 +50,77 @@ a:hover {
   border: none;
   width: 500px;
 }
+/*Today's forecast card*/
+.current-forecast {
+  padding: 10px 40px 20px 40px;
+  height: fit-content;
+  margin: 24px auto;
+}
 
+.todays-date {
+  font-size: 24px;
+  text-align: center;
+  padding-top: -40px;
+}
+
+.current-time {
+  font-size: 16px;
+  font-weight: 300;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: -20px;
+}
+
+.conditions {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: -20px;
+}
+
+.city {
+  font-size: 35px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 40px;
+}
+
+.current-temp {
+  font-size: 80px;
+}
+/*Future forecast cards*/
+.forecast {
+  margin: 16px auto;
+  height: 150px;
+  padding-left: 40px;
+}
+h3 {
+  padding-top: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+.details {
+  color: white;
+}
+.forecast-high {
+  font-size: 30px;
+  font-weight: bold;
+}
+.forecast-low {
+  font-weight: 200;
+  font-size: 24px;
+}
+/*Today's detail cards*/
+.details {
+  max-height: 70px;
+  margin: 8px auto;
+  padding: 26px 24px;
+  display: block;
+}
 /*Search bar*/
 .city-input {
-  width: 300px;
+  width: 400px;
   height: 40px;
   border-radius: 36px 0px 0px 36px;
   border-style: solid;
@@ -62,15 +133,30 @@ a:hover {
   border-color: #7393b3;
   background-color: #7393b3;
   color: white;
-  background-color: none;
   font-family: "Poppins", sans-serif;
   width: 80px;
   height: 40px;
+  padding: 7px 8px;
 }
 form {
   display: block;
   width: 500px;
-  margin: 0 auto;
+  margin: 24px auto;
 }
 
-/*Today's forecast card*/
+/*Icons*/
+.icon {
+  text-align: right;
+}
+
+.small-weather {
+  height: 100px;
+  width: 100px;
+  margin: 24px 24px;
+}
+
+.large-weather {
+  width: 200px;
+  height: 200px;
+  margin-top: 30px;
+}
