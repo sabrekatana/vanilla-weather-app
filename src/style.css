@@ -42,8 +42,6 @@ a:hover {
 
 /*Card general*/
 .card {
-  display: block;
-  margin: 16px auto;
   background-color: rgba(255, 255, 255, 0.25);
   box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
   backdrop-filter: blur(8px);
@@ -52,11 +50,10 @@ a:hover {
 }
 /*Today's forecast card*/
 .current-forecast {
-  padding: 10px 40px 20px 40px;
+  padding: 10px 0px 20px 60px;
   height: fit-content;
-  max-width: 600px;
   margin: 24px auto;
-  width: 900px;
+  width: 640px;
 }
 
 .todays-date {
@@ -131,12 +128,15 @@ h3 {
   font-size: 24px;
 }
 /*Today's detail cards*/
+.details-container {
+  width: fit-content;
+  margin: 0 auto;
+}
 .details {
-  max-height: 70px;
-  margin: 12px auto;
-  padding: 24px 30px 12px 32px;
-  width: 280px;
-  display: block;
+  height: 60px;
+  margin: 8px auto;
+  padding: 20px 8px 16px 8px;
+  width: 190px;
 }
 .small-details {
   margin-left: 8px;
@@ -169,7 +169,7 @@ form {
   display: block;
   width: 500px;
   margin: 0px auto;
-  margin-top: 10px;
+  margin-top: 60px;
 }
 
 /*Icons*/
@@ -189,10 +189,9 @@ form {
 }
 
 .large-weather {
-  width: 150px;
-  height: 150px;
-  margin-top: 80px;
-  margin-left: 80px;
+  width: 220px;
+  height: 220px;
+  margin-top: 50px;
   transition: 300ms ease-in-out;
 }
 
