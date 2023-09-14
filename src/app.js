@@ -61,6 +61,8 @@ function displayCurrent(response) {
   humidity.innerHTML = response.data.temperature.humidity;
   let localTime = document.querySelector("#current-time");
   localTime.innerHTML = formatTime(response.data.time * 1000);
+  let largeIcon = document.querySelector("#large-weather-icon");
+  largeIcon.setAttribute("src", response.data.condition.icon_url);
 
   celsiusTemperature = response.data.temperature.current;
 }
@@ -106,4 +108,4 @@ convertBack.addEventListener("click", convertBackTemp);
 let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSearch);
 
-search("Paris");
+search("New York City");
