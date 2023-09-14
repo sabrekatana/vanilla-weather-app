@@ -103,7 +103,7 @@ function displayCurrent(response) {
   let city = document.querySelector("#city");
   city.innerHTML = response.data.city;
   let currentTemp = document.querySelector("#current-temp");
-  currentTemp.innerHTML = Math.round(response.data.temperature.current);
+  currentTemp.innerHTML = Math.round(response.data.temperature.current) + "℃";
   let conditions = document.querySelector("#conditions");
   conditions.innerHTML = response.data.condition.description;
   let feels = document.querySelector("#feels");
