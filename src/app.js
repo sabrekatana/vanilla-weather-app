@@ -43,6 +43,8 @@ function formatTime(timestamp) {
   return ` ${hours}:${minutes}`;
 }
 
+//write function to format temp with degree symbol
+
 //function to display data in current forecast card
 function displayCurrent(response) {
   let city = document.querySelector("#city");
