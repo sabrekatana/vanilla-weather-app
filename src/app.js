@@ -84,7 +84,9 @@ function displayForecast(response) {
         </div>
         <div class="col">
           <div class="icon">
-            <img src=" ${forecastDay.condition.icon_url} "/>
+            <img src=" ${
+              forecastDay.condition.icon_url
+            } " class="small-weather"/>
           </div>
         </div>
       </div>
@@ -132,31 +134,6 @@ function handleSearch(event) {
   let city = document.querySelector("#city-input");
   search(city.value);
 }
-
-function convertTemp(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#current-temp");
-  convertBack.classList.remove("active");
-  converter.classList.add("active");
-  let convertedTemp = (celsiusTemperature * 9) / 5 + 32;
-  temp.innerHTML = Math.round(convertedTemp);
-}
-
-function convertBackTemp(event) {
-  event.preventDefault();
-  let temp = document.querySelector("#current-temp");
-  convertBack.classList.add("active");
-  converter.classList.remove("active");
-  temp.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
-let converter = document.querySelector("#Fahrenheit");
-converter.addEventListener("click", convertTemp);
-
-let convertBack = document.querySelector("#Celsius");
-convertBack.addEventListener("click", convertBackTemp);
 
 let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSearch);
