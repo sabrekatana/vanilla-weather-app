@@ -6,13 +6,16 @@ let apiUrlCorecastCord =
   "https://api.shecodes.io/weather/v1/forecast?lon={lon}&lat={lat}&key={key}";
 
 //video has function to convert date time lesson 6
-function formatDate(timestamp) {
+function formatTime(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
+  let now = new Date();
+  let daily = now.getDate();
   let days = [
     "Sunday",
     "Monday",
@@ -22,7 +25,22 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let day = days[date.getDay()];
+  let day = days[now.getDay()];
+  let months = [
+    "January",
+    "Feburary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+  let today = document.querySelector("#todays-date");
+  today.innerHTML = `${day}, ${month} ${daily}`;
   return ` ${hours}:${minutes}`;
 }
 
@@ -35,13 +53,13 @@ function displayCurrent(response) {
   let conditions = document.querySelector("#conditions");
   conditions.innerHTML = response.data.condition.description;
   let feels = document.querySelector("#feels");
-  feels.innerHTML = response.data.temperature.feels_like;
+  feels.innerHTML = Math.round(response.data.temperature.feels_like);
   let wind = document.querySelector("#wind");
-  wind.innerHTML = response.data.wind.speed;
+  wind.innerHTML = Math.round(response.data.wind.speed);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = response.data.temperature.humidity;
   let localTime = document.querySelector("#current-time");
-  localTime.innerHTML = formatDate(response.data.time * 1000);
+  localTime.innerHTML = formatTime(response.data.time * 1000);
 }
 
 function search(city) {

@@ -10,7 +10,10 @@
       integrity="=sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
-    <script src="https://kit.fontawesome.com/b08fe0ad22.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b08fe0ad22.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,20 +35,30 @@
               class="city-input"
               placeholder="Enter city name"
             />
-            <input type="submit" id="submit" class="buttonSubmit" value="Search" />
+            <input
+              type="submit"
+              id="submit"
+              class="buttonSubmit"
+              value="Search"
+            />
           </form>
 
           <div class="col-auto">
             <div class="current-forecast card">
-              <h3 class="todays-date" id="todays-date">Wednesday, July 1st</h3>
-              <p class="current-time">Last updated:<span id="current-time"></span></p>
+              <h3 class="todays-date" id="todays-date"></h3>
+              <p class="current-time">
+                Last updated:<span id="current-time"></span>
+              </p>
               <div class="row">
                 <div class="col">
                   <h2 class="city" id="city"></h2>
-                  <h1 class="current-temp" id="current-temp">°</h1> 
+                  <h1 class="current-temp" id="current-temp">°</h1>
                   <p class="conditions" id="conditions"></p>
-                  
-                  <h3 class="metric">Celsius | <a href="#" class="metric" id="Fahrenheit">Fahrenheit</a>  </h3>
+
+                  <h3 class="metric">
+                    Celsius |
+                    <a href="#" class="metric" id="Fahrenheit">Fahrenheit</a>
+                  </h3>
                 </div>
                 <div class="col">
                   <img
@@ -57,16 +70,22 @@
             </div>
           </div>
           <div class="details card">
-            <i class="fa-solid fa-temperature-high"></i>     
-            <span class="small-details" id="feels">Feels like: 
+            <p class="small-details">
+              <i class="fa-solid fa-temperature-high icon"></i>Feels like:
+              <span id="feels"></span> degrees
+            </p>
           </div>
           <div class="details card">
-            <i class="fa-solid fa-water"></i>
-            <span class="small-details" id="humidity"> Humidity: 
+            <p class="small-details">
+              <i class="fa-solid fa-water icon"></i>Humidity:
+              <span id="humidity"></span>%
+            </p>
           </div>
           <div class="details card">
-            <i class="fa-solid fa-wind"></i> 
-            <span class="small-details" id="wind"> Wind speed: 
+            <p class="small-details">
+              <i class="fa-solid fa-wind icon"></i> Wind speed:
+              <span id="wind"></span> mph
+            </p>
           </div>
         </div>
         <div class="col">
