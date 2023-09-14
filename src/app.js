@@ -43,37 +43,58 @@ function formatTime(timestamp) {
   return ` ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
-  let days = ["Thursday", "Friday", "Saurday"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `
       <div class="forecast card">
       <div class="row">
         <div class="col">
-          <h3>${day}</h3>
+          <h3>${formatDay(forecastDay.time)}</h3>
           <p class="forecast-high" id="forecast-high-2">
-            80°/<span class="forecast-low" id="forecast-low-2">51°</span>
+            ${Math.round(
+              forecastDay.temperature.maximum
+            )}/<span class="forecast-low" id="forecast-low-2">${Math.round(
+          forecastDay.temperature.minimum
+        )}</span>
           </p>
         </div>
         <div class="col">
           <div class="icon">
-            <img src="images/light-theme/sun.svg" class="small-weather" />
+            <img src=" ${forecastDay.condition.icon_url} "/>
           </div>
         </div>
       </div>
     </div>
 `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-//write function to format temp with degree symbol
 
 //function to display data in current forecast card
 function displayCurrent(response) {
