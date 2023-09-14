@@ -49,7 +49,7 @@ a:hover {
   backdrop-filter: blur(8px);
   border-radius: 16px;
   border: none;
-  width: 450px;
+  width: 500px;
 }
 /*Today's forecast card*/
 .current-forecast {
@@ -132,7 +132,7 @@ h3 {
 }
 /*Search bar*/
 .city-input {
-  width: 350px;
+  width: 400px;
   height: 40px;
   border-radius: 36px 0px 0px 36px;
   border-style: solid;
@@ -152,7 +152,7 @@ h3 {
 }
 form {
   display: block;
-  width: 450px;
+  width: 500px;
   margin: 0px auto;
 }
 
