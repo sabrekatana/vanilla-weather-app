@@ -43,7 +43,7 @@ function formatTime(timestamp) {
   return ` ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#weather-forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -101,8 +101,9 @@ function search(city) {
   let apiKey = "48eb25c4a02543a3ta93fefffob47a4f";
   let = "New York";
   let apiUrlCurrent = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}`;
+  let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
   axios.get(apiUrlCurrent).then(displayCurrent);
-  displayForecast();
+  axios.get(apiUrlForecast).then(displayForecast);
 }
 
 function handleSearch(event) {
