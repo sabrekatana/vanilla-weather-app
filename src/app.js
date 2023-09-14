@@ -43,6 +43,36 @@ function formatTime(timestamp) {
   return ` ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#weather-forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thursday", "Friday", "Saurday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="forecast card">
+      <div class="row">
+        <div class="col">
+          <h3>${day}</h3>
+          <p class="forecast-high" id="forecast-high-2">
+            80°/<span class="forecast-low" id="forecast-low-2">51°</span>
+          </p>
+        </div>
+        <div class="col">
+          <div class="icon">
+            <img src="images/light-theme/sun.svg" class="small-weather" />
+          </div>
+        </div>
+      </div>
+    </div>
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 //write function to format temp with degree symbol
 
 //function to display data in current forecast card
@@ -72,6 +102,7 @@ function search(city) {
   let = "New York";
   let apiUrlCurrent = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}`;
   axios.get(apiUrlCurrent).then(displayCurrent);
+  displayForecast();
 }
 
 function handleSearch(event) {
