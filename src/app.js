@@ -5,7 +5,6 @@ let apiUrlForecast =
 let apiUrlCorecastCord =
   "https://api.shecodes.io/weather/v1/forecast?lon={lon}&lat={lat}&key={key}";
 
-//video has function to convert date time lesson 6
 function formatTime(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -60,10 +59,13 @@ function displayCurrent(response) {
   humidity.innerHTML = response.data.temperature.humidity;
   let localTime = document.querySelector("#current-time");
   localTime.innerHTML = formatTime(response.data.time * 1000);
+
+  celsiusTemperature = response.data.temperature.current;
 }
 
 function search(city) {
   let apiKey = "48eb25c4a02543a3ta93fefffob47a4f";
+  let = "New York";
   let apiUrlCurrent = `https://api.shecodes.io/weather/v1/current?query=${city}}&key=${apiKey}`;
   axios.get(apiUrlCurrent).then(displayCurrent);
 }
@@ -74,5 +76,32 @@ function handleSearch(event) {
   search(city.value);
 }
 
+function convertTemp(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#current-temp");
+  convertBack.classList.remove("active");
+  converter.classList.add("active");
+  let convertedTemp = (celsiusTemperature * 9) / 5 + 32;
+  temp.innerHTML = Math.round(convertedTemp);
+}
+
+function convertBackTemp(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#current-temp");
+  convertBack.classList.add("active");
+  converter.classList.remove("active");
+  temp.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let converter = document.querySelector("#Fahrenheit");
+converter.addEventListener("click", convertTemp);
+
+let convertBack = document.querySelector("#Celsius");
+convertBack.addEventListener("click", convertBackTemp);
+
 let form = document.querySelector("#city-search");
 form.addEventListener("submit", handleSearch);
+
+search("Paris");
